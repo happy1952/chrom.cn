@@ -1,0 +1,32 @@
+html, body {
+	color: #505050;
+	line-height: 1.75em;
+	background: #ebebeb;
+	position: relative;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+.main-header{
+	padding: 45px 0;
+}
+.main-header, main-navigation{
+	text-align: center;
+}
+.main-navigation{
+    background: #ffffff;
+    border-top: 1px solid #ebebeb;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #e1e1e1;
+}
+.navbar .navbar-nav li.active>a{
+	background-color: #ffffff;
+}
+.navbar .navbar-nav li{
+	text-align: center;
+	min-width: 85px;
+}
+.navbar .navbar-nav li a:hover{
+	color: #555;
+	background-color: #e7e7e7;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+}
