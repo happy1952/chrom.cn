@@ -28,7 +28,7 @@ if(!defined('STATICPATH')){
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 style="color: #FFF; font-size: 48px;">ChaoRoom</h1>
+                    <a href="<?php echo base_url(); ?>"><h1 style="color: #FFF; font-size: 48px;">ChaoRoom</h1></a>
                     <h2 style="color: #FFF; font-size: 30px;">成功总是偏爱那些执着于梦想的人</h2>
                 </div>
             </div>
