@@ -885,3 +885,47 @@ pre {
   height: 30px;
   line-height: 30px;
 }
+#comment-post input[type="text"],
+#comment-post textarea{
+  width: 100%;
+}
+
+.comment{
+  margin: 20px 0;
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 16px;
+  border-top: 10px #ee9285 solid;
+  overflow: hidden;
+  color: #333;
+  height: 100%;
+  zoom: 1;
+}
+.comment .avatar {
+  float: left;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+}
+.comment .comment-info {
+  float: left;
+  width: 90%;
+}
+.comment .comment-time {
+  color: #999999;
+  display: inline;
+  font-size: 10px;
+}
+.comment-children {
+  margin: 5px 0;
+  clear: both;
+  border: 1px dashed #ee9285;
+  border-left: 5px solid #ee9285;
+  padding: 5px;
+}
+.comment .comment-reply {
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+  _cursor: hand;
+}

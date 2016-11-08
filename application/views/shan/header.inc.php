@@ -19,3 +19,19 @@ if(!defined('STATICPATH')){
 <script>
   var _hmt = _hmt || [];
 </script>
+
+</head>
+<body class="home-template">
+    <!-- start header -->
+    <header class="main-header">
+    <!-- style="background-image: url(<?php echo STATICPATH; ?>static/images/main-header.jpg)" -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 style="color: #FFF; font-size: 48px;">ChaoRoom</h1>
+                    <h2 style="color: #FFF; font-size: 30px;">成功总是偏爱那些执着于梦想的人</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->

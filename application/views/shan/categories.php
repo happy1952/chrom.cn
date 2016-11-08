@@ -35,14 +35,17 @@
         <div class="container">
             <div class="row">
                 <main class="col-md-8 main-content">
-                        <article id=70 class="post">
-                        <div class="featured" title="推荐文章">
-                            <i class="fa fa-star"></i>
-                        </div>
+                    
+                    <div class="cover tag-cover">
+                        <h3 class="tag-name">标签：Laravel 5</h3>
+                        <div class="post-count">共 14 篇文章</div>
+                    </div>
+
+                    <article id=70 class="post">
                         <div class="post-head">
                             <h1 class="post-title"><a href="<?php echo site_url('articles'); ?>">文章标题</a></h1>
                             <div class="post-meta">
-                                <span class="author">作者：<a href="<?php echo site_url('author'); ?>">王赛</a></span> &bull;
+                                <span class="author">作者：<a href="<?php echo site_url('articles'); ?>">王赛</a></span> &bull;
                                 <time class="post-date" datetime="2016年8月24日星期三凌晨2点04分" title="2016年8月24日星期三凌晨2点04分">2016年8月24日</time>
                             </div>
                         </div>
@@ -65,7 +68,7 @@
                         <div class="post-head">
                             <h1 class="post-title"><a href="<?php echo site_url('articles'); ?>">Laracon 开发者大会快报：听 Taylor Otwell  讲解 Laravel 5.3 的新特性</a></h1>
                             <div class="post-meta">
-                                <span class="author">作者：<a href="<?php echo site_url('author'); ?>">王赛</a></span> &bull;
+                                <span class="author">作者：<a href="<?php echo site_url('articles'); ?>">王赛</a></span> &bull;
                                 <time class="post-date" datetime="2016年7月28日星期四晚上7点29分" title="2016年7月28日星期四晚上7点29分">2016年7月28日</time>
                             </div>
                         </div>

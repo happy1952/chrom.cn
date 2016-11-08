@@ -5,44 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<?php include_once 'header.inc.php'; ?>
 
-    <!-- start navigation -->
-    <nav class="main-navigation">
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="navbar-header">
-                        <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-bars"></i>
-                        </span>
-                    </div>
-                    <div class="collapse navbar-collapse" id="main-menu">
-                        <ul class="menu">
-                            <li class="nav-current" role="presentation"><a href="/">首页</a></li>
-                            <li  role="presentation"><a href="#" title="Linux"  target="_blank">Linux</a></li>
-                            <li  role="presentation"><a href="#" title="PHP"  target="_blank">PHP</a></li>
-                            <li  role="presentation"><a href="#" title="前端" target="_blank">前端</a></li>
-                            <li  role="presentation"><a href="#" title="关于" target="_blank">关于</a></li>
-						</ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </nav>
-    <!-- end navigation -->
-
+    <nav class="main-navigation"></nav>
     <section class="content-wrap">
         <div class="container">
             <div class="row">
                 <main class="col-md-8 main-content">
-                        <article id=70 class="post">
-                        <div class="featured" title="推荐文章">
-                            <i class="fa fa-star"></i>
+                    <div class="cover author-cover">
+                        <div class="avatar-wrap">
+                            <img src="http://image.golaravel.com/3/69/2bb4ddae2b7330de0c4991761548a.jpg" alt="雨师" class="avatar">
                         </div>
+                        <h3 class="author-name">作者：雨师</h3>
+                        <div class="meta-info">
+                            <span class="post-count"><i class="fa fa-pencil-square-o"></i>6 篇文章</span>
+                            <span class="loaction"><i class="fa fa-map-marker"></i>广州</span>
+                        </div>
+                        <div class="bio">由于学艺不精，内容可能有误。如有错误欢迎联系邮箱312841925@qq.com指出。</div>
+                    </div>
+                    <article id=70 class="post">
                         <div class="post-head">
                             <h1 class="post-title"><a href="<?php echo site_url('articles'); ?>">文章标题</a></h1>
                             <div class="post-meta">
-                                <span class="author">作者：<a href="<?php echo site_url('author'); ?>">王赛</a></span> &bull;
+                                <span class="author">作者：<a href="<?php echo site_url('articles'); ?>">王赛</a></span> &bull;
                                 <time class="post-date" datetime="2016年8月24日星期三凌晨2点04分" title="2016年8月24日星期三凌晨2点04分">2016年8月24日</time>
                             </div>
                         </div>
@@ -65,7 +48,7 @@
                         <div class="post-head">
                             <h1 class="post-title"><a href="<?php echo site_url('articles'); ?>">Laracon 开发者大会快报：听 Taylor Otwell  讲解 Laravel 5.3 的新特性</a></h1>
                             <div class="post-meta">
-                                <span class="author">作者：<a href="<?php echo site_url('author'); ?>">王赛</a></span> &bull;
+                                <span class="author">作者：<a href="<?php echo site_url('articles'); ?>">王赛</a></span> &bull;
                                 <time class="post-date" datetime="2016年7月28日星期四晚上7点29分" title="2016年7月28日星期四晚上7点29分">2016年7月28日</time>
                             </div>
                         </div>
