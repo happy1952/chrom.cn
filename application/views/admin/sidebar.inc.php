@@ -12,7 +12,18 @@
                 </div>
                 <!-- /input-group -->
             </li>
-            <li><a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+            <li>
+                <a href="<?php echo site_url('Amwelcome'); ?>">
+                <i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="javascript:;"><i class="fa fa-bar-chart-o fa-fw"></i> 文章管理<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="<?php echo site_url('AmArticlemanage'); ?>">文章列表</a></li>
+                    <li><a href="<?php echo site_url('AmArticlemanage/addArticle'); ?>">添加文章</a></li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
