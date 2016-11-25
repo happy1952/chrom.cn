@@ -778,7 +778,8 @@
 
     </div>
     <!-- /#wrapper -->
-
+    
+    <?php include_once 'footer.inc.php'; ?>
 </body>
 
 </html>
