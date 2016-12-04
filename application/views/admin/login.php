@@ -54,6 +54,7 @@
     <script src="static/vendor/metisMenu/metisMenu.min.js"></script>
     <script src="static/js/sb-admin-2.js"></script>
     <script src="static/vendor/Validform/Validform_v5.3.2_min.js"></script>
+    <script src="static/vendor/layer/layer.js"></script>
     <script>
 
         $(function(){
@@ -80,7 +81,7 @@
                     return false;
                 }
 
-                var fm      = $("#userForm")[0];
+                var fm      = $("#LoginForm")[0];
                 var datas   = new FormData(fm);
                 $.ajax({
                     type:"POST",
