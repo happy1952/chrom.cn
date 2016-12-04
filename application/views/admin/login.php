@@ -31,17 +31,17 @@
                         <form role="form" id="LoginForm">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus datatype="e" nullmsg="qing shu ru yong hu you xiang !" errormsg="qing shu ru zheng que de you xiang di zhi !">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus datatype="e" nullmsg="请输入邮箱地址！" errormsg="请输正确的邮箱地址！">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" datatype="*" nullmsg="qing shu ru mi ma !" errormsg="qing shu ru mima !">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" datatype="*" nullmsg="请输入用户密码！" errormsg="请输入用户密码！">
                                 </div>
                                 <div class="checkbox">
                                     <label>
                                         <input name="remember" type="checkbox" value="1">Remember Me
                                     </label>
                                 </div>
-                                <a href="javascript:;" class="btn btn-lg btn-success btn-block">Login</a>
+                                <a href="javascript:;" class="btn btn-lg btn-success btn-block" id="submitForm">Login</a>
                             </fieldset>
                         </form>
                     </div>
@@ -84,7 +84,7 @@
                 var datas   = new FormData(fm);
                 $.ajax({
                     type:"POST",
-                    url:"http://dl.21tehui.com/Usermanage/addUser.html",
+                    url:"<?php echo site_url('AmLogin'); ?>",
                     processData:false,
                     contentType:false, 
                     data:datas,
