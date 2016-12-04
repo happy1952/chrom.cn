@@ -5,19 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="char">
+    <meta name="keywords" content="chrom">
+    <meta name="description" content="chrom">
     <title>Chrom Admin</title>
-    <!-- Bootstrap Core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
     <link href="static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
-    <!-- Custom Fonts -->
     <link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -33,21 +28,20 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" id="LoginForm">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus datatype="e" nullmsg="qing shu ru yong hu you xiang !" errormsg="qing shu ru zheng que de you xiang di zhi !">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" datatype="*" nullmsg="qing shu ru mi ma !" errormsg="qing shu ru mima !">
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                        <input name="remember" type="checkbox" value="1">Remember Me
                                     </label>
                                 </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                <a href="javascript:;" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
                         </form>
                     </div>
@@ -55,14 +49,64 @@
             </div>
         </div>
     </div>
-    <!-- jQuery -->
     <script src="static/js/jquery.3.1.1.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="static/vendor/metisMenu/metisMenu.min.js"></script>
-    <!-- Custom Theme JavaScript -->
     <script src="static/js/sb-admin-2.js"></script>
+    <script src="static/vendor/Validform/Validform_v5.3.2_min.js"></script>
+    <script>
+
+        $(function(){
+
+            document.onkeydown=function(event){
+
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+
+                if(e && e.keyCode==13){ 
+                    
+                    $("#submitForm").click();
+                    return false;
+                }
+            }; 
+
+            var vform = $("#LoginForm").Validform({
+                tiptype:3,
+                showAllError:true,
+            });
+
+            $("#submitForm").click(function(){
+
+                if(!vform.check()){
+                    return false;
+                }
+
+                var fm      = $("#userForm")[0];
+                var datas   = new FormData(fm);
+                $.ajax({
+                    type:"POST",
+                    url:"http://dl.21tehui.com/Usermanage/addUser.html",
+                    processData:false,
+                    contentType:false, 
+                    data:datas,
+                    dataType:"json",
+                    success:function(data){
+                        var json = eval(data);
+                        if(json.isOk == 'error'){
+                            layer.alert(json.message, {icon:5});
+                        }else{
+                            layer.alert('添加成功！', {icon:6}, function(){
+                              window.location.href="http://dl.21tehui.com/Usermanage.html";
+                            });
+                        }
+                    },
+                    error:function(){
+                        layer.alert('网络不稳定，请稍后再试！', {icon:5});
+                    }
+                });
+            });
+        });
+    
+    </script>
 </body>
 
 </html>

@@ -10,10 +10,6 @@ class AmLogin extends MY_Controller{
 
 	public function index(){
 
-		if(!session_id()){
-			session_start();
-			$_SESSION['isLogin'] = TRUE;
-		}
 		$this->load->view('admin/login');
 	}
 }
