@@ -31,10 +31,10 @@
                         <form role="form" id="LoginForm">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus datatype="e" nullmsg="请输入邮箱地址！" errormsg="请输正确的邮箱地址！">
+                                    <input class="form-control" placeholder="Username" name="username" type="username" autofocus datatype="s2-16" nullmsg="请输入用户名！" errormsg="请输正确的用户名！">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" datatype="*" nullmsg="请输入用户密码！" errormsg="请输入用户密码！">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" datatype="*6-20" nullmsg="请输入用户密码！" errormsg="请输入用户密码！">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -55,59 +55,7 @@
     <script src="static/js/sb-admin-2.js"></script>
     <script src="static/vendor/Validform/Validform_v5.3.2_min.js"></script>
     <script src="static/vendor/layer/layer.js"></script>
-    <script>
-
-        $(function(){
-
-            document.onkeydown=function(event){
-
-                var e = event || window.event || arguments.callee.caller.arguments[0];
-
-                if(e && e.keyCode==13){ 
-                    
-                    $("#submitForm").click();
-                    return false;
-                }
-            }; 
-
-            var vform = $("#LoginForm").Validform({
-                tiptype:3,
-                showAllError:true,
-            });
-
-            $("#submitForm").click(function(){
-
-                if(!vform.check()){
-                    return false;
-                }
-
-                var fm      = $("#LoginForm")[0];
-                var datas   = new FormData(fm);
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo site_url('AmLogin'); ?>",
-                    processData:false,
-                    contentType:false, 
-                    data:datas,
-                    dataType:"json",
-                    success:function(data){
-                        var json = eval(data);
-                        if(json.isOk == 'error'){
-                            layer.alert(json.message, {icon:5});
-                        }else{
-                            layer.alert('添加成功！', {icon:6}, function(){
-                              window.location.href="http://dl.21tehui.com/Usermanage.html";
-                            });
-                        }
-                    },
-                    error:function(){
-                        layer.alert('网络不稳定，请稍后再试！', {icon:5});
-                    }
-                });
-            });
-        });
-    
-    </script>
+    <script src="static/js/test.js"></script>
 </body>
 
 </html>
