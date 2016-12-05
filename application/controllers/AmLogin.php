@@ -5,6 +5,16 @@ class AmLogin extends MY_Controller{
 
 	public function __construct(){
 
+		if(!session_id()){
+			
+			session_start();
+		}
+
+		if(@$_SESSION['isLogin'] === TRUE){
+
+			header('Location:'.site_url('Amwelcome'));
+		}
+
 		parent::__construct();
 
 		$this->load->model('AmLogin_model', 'amlogin');
@@ -24,8 +34,9 @@ class AmLogin extends MY_Controller{
 
 		$this->_checkName($username);
 		$this->_checkPswd($username, $password);
+		$this->_isLogin($username);
 
-		$this->load->view('admin/login');
+		parent::echoMsg('OK', '登录成功！');
 	}
 
 	private function _checkName($name){
@@ -51,12 +62,23 @@ class AmLogin extends MY_Controller{
 			parent::echoMsg('error', '用户名或密码不正确！');
 		}
 
-		$password = $this->amlogin->getKey($name, 'password');
+		$res = $this->amlogin->getKey($name, 'password');
+
+		if(parent::toSha1($pswd) !== $res['password']){
+
+			parent::echoMsg('error', '用户名或密码不正确！');
+		}
 	}
 
 	private function _setRemember(){
 	
 		// 记住用户名和密码
+	}
+
+	private function _isLogin($username){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['isLogin'] = TRUE;
 	}
 
 	private function _checkEmpty($str, $msg){

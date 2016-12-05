@@ -10,7 +10,11 @@ class MY_Controller extends CI_Controller{
 
 	protected function echoMsg($status='error', $msg=''){
 
-		exit(json_encode(array($status, $msg)));
+		$arr['isOk'] = $status;
+		
+		$arr['message'] = $msg;
+
+		exit(json_encode($arr));
 	}
 
 	protected function formatStr($str){
