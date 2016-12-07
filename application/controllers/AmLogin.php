@@ -88,6 +88,56 @@ class AmLogin extends MY_Controller{
 			parent::echoMsg('error', $msg.'不得为空！');
 		}
 	}
+
+	/**
+	 * [_getRealIP 获取当前登录用户真实IP地址]
+	 * @return [string] [返回用户IP地址]
+	 */
+	private function _getRealIP(){
+		
+		if(getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknow")){
+			
+			$ip = getenv("HTTP_CLIENT_IP");
+		}else if(getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknow")){
+			
+			$ip = getenv("HTTP_X_FORWARDED_FOR");
+		}else if(getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknow")){
+			
+			$ip = getenv("REMOTE_ADDR");
+		}else if(isset($_SERVER["REMOTE_ADDR"]) && $_SERVER["REMOTE_ADDR"] && strcasecmp($_SERVER["REMOTE_ADDR"],"unknow")){
+			
+			$ip = $_SERVER["REMOTE_ADDR"];
+		}else{
+			
+			$ip = "unknow";
+		}
+		return $ip;
+	}
+
+	/**
+	 * [_getArea 根据用户IP获取用户所在地址]
+	 * @param  [string] $ip [用户IP地址]
+	 * @return [string]     [description]
+	 */
+	private function _getArea($ip=''){
+
+		if(empty($ip)) return '未知地址';
+		
+		$str = parent::getUrlSource('http://ip.taobao.com/service/getIpInfo.php?ip='.$ip);
+
+		if(!empty($str)){
+
+			$areas = json_decode($str, true);
+			$areas = $areas['data'];
+			
+			if(!empty($areas)){
+				
+				return $areas['country'].$areas['region'].$areas['city'];
+			}
+			return '未知地址';
+		}
+		return '未知地址';
+	}
 }
 
 ?>
