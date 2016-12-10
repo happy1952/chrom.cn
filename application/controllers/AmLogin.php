@@ -5,17 +5,14 @@ class AmLogin extends MY_Controller{
 
 	public function __construct(){
 
-		if(!session_id()){
-			
-			session_start();
-		}
+		if(!session_id()) session_start();
+
+		parent::__construct();
 
 		if(@$_SESSION['isLogin'] === TRUE){
 
 			header('Location:'.site_url('Amwelcome'));
 		}
-
-		parent::__construct();
 
 		$this->load->model('AmLogin_model', 'amlogin');
 	}
