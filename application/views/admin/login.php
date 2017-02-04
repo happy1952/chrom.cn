@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="chrom">
     <meta name="description" content="chrom">
-    <title>Chrom Admin</title>
+    <title>Chrom后台管理</title>
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
     <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
     <script src="static/js/sb-admin-2.js"></script>
     <script src="static/vendor/Validform/Validform_v5.3.2_min.js"></script>
     <script src="static/vendor/layer/layer.js"></script>
-    <script src="static/js/test.js"></script>
+    <script src="static/js/login.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chrom Admin</title>
+    <title>Chrom后台管理</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>static/css/bootstrap.min.css" rel="stylesheet">
