@@ -13,7 +13,7 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="<?php echo site_url('Amwelcome'); ?>">
+                <a href="<?php echo site_url('AmWelcome'); ?>">
                 <i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
             <li>

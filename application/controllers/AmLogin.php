@@ -11,7 +11,7 @@ class AmLogin extends MY_Controller{
 
 		if(@$_SESSION['isLogin'] === TRUE){
 
-			header('Location:'.site_url('Amwelcome'));
+			header('Location:'.site_url('AmWelcome'));
 		}
 
 		$this->load->model('AmLogin_model', 'amlogin');

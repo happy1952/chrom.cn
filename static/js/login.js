@@ -29,7 +29,7 @@ $(function(){
                 if(json.isOk == 'error'){
                     layer.alert(json.message, {icon:5});
                 }else{
-                    window.location.href="Amwelcome.html";
+                    window.location.href="AmWelcome.html";
                 }
             },
             error:function(){

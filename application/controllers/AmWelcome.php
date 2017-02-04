@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Amwelcome extends MY_Admin{
+class AmWelcome extends MY_Admin{
 
 	public function __construct(){
 

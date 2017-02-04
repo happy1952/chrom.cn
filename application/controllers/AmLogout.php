@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Amlogout extends CI_Controller{
+class AmLogout extends CI_Controller{
 
 	public function __construct(){
 	
@@ -14,8 +14,9 @@ class Amlogout extends CI_Controller{
 	
 		$_SESSION = array();
 		
-		header('Location:'.site_url('Amlogin'));
+		header('Location:'.site_url('AmLogin'));
 		
 		exit;
 	}
 }
+
