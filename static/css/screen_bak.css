@@ -39,11 +39,11 @@ h6 {
   font-size: 0.75em;
 }
 a {
-  color: #337ab7;
+  color: #f4645f;
   outline: none;
 }
 a:hover {
-  color: #337ab7;
+  color: #f4645f;
 }
 a:active,a:focus,a img {
   outline: none;
@@ -53,8 +53,8 @@ a:active,a:focus,a img {
   border-radius: 2px;
 }
 .btn-default {
-  border: 1px solid #337ab7;
-  background: #337ab7;
+  border: 1px solid #f4645f;
+  background: #f4645f;
   color: #ffffff;
   -webkit-transition: all 0.2s ease-in-out;
        -o-transition: all 0.2s ease-in-out;
@@ -82,11 +82,11 @@ input[type="search"],input[type="text"],input[type="url"],input[type="email"],te
           transition: all 0.2s;
 }
 input[type="search"]:focus,input[type="text"]:focus,input[type="url"]:focus,input[type="email"]:focus,textarea:focus {
-  border: 1px solid #337ab7;
+  border: 1px solid #f4645f;
   outline: none;
 }
 blockquote {
-  border-left: 4px solid #337ab7;
+  border-left: 4px solid #f4645f;
 }
 pre {
   padding: 0;
@@ -95,12 +95,12 @@ pre {
 }
 ::-moz-selection {
   color: #ffffff;
-  background: #337ab7;
+  background: #f4645f;
   text-shadow: none;
 }
 ::selection {
   color: #ffffff;
-  background: #337ab7;
+  background: #f4645f;
   text-shadow: none;
 }
 /* header */
@@ -110,7 +110,7 @@ pre {
 .main-header {
   text-align: center;
   padding: 42px 0;
-  background: #337ab7;
+  background: #f4645f;
 }
 .main-header .branding {
   font-size: 3.5em;
@@ -166,7 +166,7 @@ pre {
   position: relative;
 }
 .main-navigation .menu li.nav-current {
-  border-bottom: 2px solid #337ab7;
+  border-bottom: 2px solid #f4645f;
   margin-bottom: -2px;
 }
 .main-navigation .menu li a {
@@ -176,7 +176,7 @@ pre {
   padding: 0 21px;
 }
 .main-navigation .menu li:hover > a {
-  color: #337ab7;
+  color: #f4645f;
   text-decoration: none;
 }
 .main-navigation .menu li ul {
@@ -205,7 +205,7 @@ pre {
   color: #505050;
 }
 .main-navigation .menu li ul:hover > a {
-  color: #337ab7;
+  color: #f4645f;
 }
 .main-navigation .menu li:hover ul {
   visibility: visible;
@@ -221,7 +221,7 @@ pre {
     display: block;
   }
   .main-navigation .menu li:hover > a {
-    color: #337ab7;
+    color: #f4645f;
     text-decoration: none;
   }
   .main-navigation .menu li ul {
@@ -263,7 +263,7 @@ pre {
 }
 .post .featured {
   position: absolute;
-  background: #337ab7;
+  background: #f4645f;
   color: #ffffff;
   text-align: center;
   top: -12px;
@@ -329,7 +329,7 @@ pre {
   margin-left: 7px;
 }
 .post .post-footer .tag-list a:hover {
-  color: #337ab7;
+  color: #f4645f;
 }
 /* post content */
 /*====================================================
@@ -448,7 +448,7 @@ pre {
 }
 .post-content blockquote {
   margin: 0 0 1.64em 0;
-  border-left: 3px solid #337ab7;
+  border-left: 3px solid #f4645f;
   padding-left: 12px;
   color: #666664;
 }
@@ -603,7 +603,7 @@ pre {
   text-align: center;
   display: inline-block;
   color: #ffffff;
-  background: #337ab7;
+  background: #f4645f;
   border-radius: 2px;
 }
 .pagination a a:hover {
@@ -617,7 +617,7 @@ pre {
   line-height: 36px;
 }
 .pagination .page-number {
-  background: #337ab7;
+  background: #f4645f;
   color: #ffffff;
   margin: 0 3px;
   display: inline-block;
@@ -695,7 +695,7 @@ pre {
   content: "";
   width: 90px;
   height: 1px;
-  background: #337ab7;
+  background: #f4645f;
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -715,7 +715,7 @@ pre {
           transition: all 0.2s ease;
 }
 .widget .recent-post .recent-single-post .post-title:hover {
-  color: #337ab7;
+  color: #f4645f;
   text-decoration: none;
 }
 .widget .recent-post .recent-single-post .date {
@@ -734,8 +734,8 @@ pre {
 }
 .widget .tag-cloud a:hover {
   color: #ffffff;
-  background: #337ab7;
-  border: 1px solid #337ab7;
+  background: #f4645f;
+  border: 1px solid #f4645f;
   text-decoration: none;
 }
 .widget .social {
@@ -759,8 +759,8 @@ pre {
 }
 .widget .social li:hover i {
   color: #ffffff;
-  background: #337ab7;
-  border: 1px solid #337ab7;
+  background: #f4645f;
+  border: 1px solid #f4645f;
 }
 .widget .newsletter .input-group {
   margin-bottom: 10px;
@@ -827,7 +827,7 @@ pre {
   border: 1px solid #303030;
 }
 .main-footer .widget .tag-cloud a:hover {
-  border: 1px solid #337ab7;
+  border: 1px solid #f4645f;
 }
 .main-footer .widget .friend-links a {
   border: none;
@@ -846,7 +846,7 @@ pre {
   color: #959595;
 }
 .main-footer .widget .recent-post .recent-single-post .post-title:hover {
-  color: #337ab7;
+  color: #f4645f;
 }
 .main-footer .widget .recent-post .recent-single-post .date {
   color: #505050;
@@ -870,7 +870,7 @@ pre {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  background: rgba(100, 95, 244, 0.6);
+  background: rgba(244, 100, 95, 0.6);
   color: #ffffff;
   text-align: center;
   border-radius: 2px;
@@ -878,7 +878,7 @@ pre {
   display: none;
 }
 #back-to-top:hover {
-  background: #337ab7;
+  background: #f4645f;
 }
 #back-to-top i {
   width: 30px;
